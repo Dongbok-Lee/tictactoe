@@ -1,6 +1,7 @@
-*{
-  font-family:  'Noto Sans KR','Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','돋움',dotum, sans-serif;
+* {
+  font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', 'Apple SD Gothic Neo', '돋움', dotum, sans-serif;
 }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -14,41 +15,45 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-   margin: 0;
-   padding: 0;
-   border: 0;
-   font-size: 100%;
-   vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-   display: block;
+  display: block;
 }
+
 body {
-   line-height: 1;
+  line-height: 1;
 }
+
 ol, ul {
-   list-style: none;
+  list-style: none;
 }
+
 blockquote, q {
-   quotes: none;
+  quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-   content: '';
-   content: none;
+  content: '';
+  content: none;
 }
+
 table {
-   border-collapse: collapse;
-   border-spacing: 0;
- }
-.game{
-  display: inline-block;
-    margin: 0 auto;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-.game table{
-  position: static;
+
+.game table {
+  position: relative;
+  left: 40%;
   background-color: #f4f4f4;
   padding: 30px;
   border-radius: 20px;
@@ -56,33 +61,32 @@ table {
   box-sizing: border-box;
 }
 
-.game td{
+.game td {
   width: 100px;
   height: 100px;
   border: 15px solid #c0c0c0;
 }
 
-.game a{
-  width: 100px;
-  height: 100px;
-  display: block;
-  color: black;
-  text-decoration: none;
-  font-size: 30px;
-}
-
-#td1, #td2, #td3{
+#td1, #td2, #td3 {
   border-top: none;
 }
 
-#td6, #td7, #td8{
+#td7, #td8, #td9 {
   border-bottom: none;
 }
 
-#td1, #td4, #td6{
+#td1, #td4, #td7 {
   border-left: none;
 }
 
-#td3, #td5, #td8{
+#td3, #td6, #td9 {
   border-right: none;
+}
+
+.p1{
+  background-color: black;
+}
+
+.p2{
+  background-color: pink;
 }
