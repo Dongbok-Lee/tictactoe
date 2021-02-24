@@ -84,9 +84,13 @@ table {
 }
 
 .p1{
-  background-color: black;
+  background-image: url(go.jpeg);
+  overflow: hidden;
+  background-position: -95px -316px;
 }
 
 .p2{
-  background-color: pink;
+  background-image: url(go.jpeg);
+  overflow: hidden;
+  background-position: -302px -316px;
 }
