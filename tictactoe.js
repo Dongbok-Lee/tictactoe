@@ -2,12 +2,8 @@ var n = 9;
 var cntp1 = 0;
 var cntp2 = 0;
 var numbers = new Array();
-for (var j = 0; j < 9; j++) {
-  numbers[j] = 0;
-}
-var tb = new Array();
 for (var i = 0; i < 9; i++) {
-  tb[i] = i;
+  numbers[i]=0;
 }
 
 function tictactoe(t) {
@@ -17,6 +13,7 @@ function tictactoe(t) {
       numbers[t - 1] = 1;
     } else {
       document.getElementById('td' + t).classList.add('p1');
+      animateCircle(t);
       numbers[t - 1] = 1;
     }
     n--;
@@ -69,6 +66,10 @@ function win(u) {
   else{
     document.getElementById('wcontent').innerHTML = '무승부 입니다';
     document.getElementById('wcontent').style.display = 'block';
+    n = 0;
+    for (m = 0; m < 9; m++) {
+      tb[m] = m;
+    }
   }
 }
 }
@@ -83,4 +84,21 @@ function reset() {
     document.getElementById('wcontent').style.display = 'none';
 
   }
+}
+function animateCircle(t){
+  var ctx = document.querySelector('#circle'+t).getContext("2d");
+  var end = Math.PI;
+  for(var i = 0; i<=100; i++){
+    draw(i);
+  }
+function draw(delay){
+  setTimeout(function(){
+    ctx.clearRect(0,0,100,100);
+    ctx.lineWidth = "15";
+    ctx.strokeStyle = "#b5b2ff";
+    ctx.beginPath();
+    ctx.arc(50,50,40,0,end*2/100*delay);
+    ctx.stroke();
+  },delay*4);
+ }
 }
