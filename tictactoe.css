@@ -94,3 +94,57 @@ table {
   overflow: hidden;
   background-position: -302px -316px;
 }
+
+.result{
+  position: relative;
+}
+
+#a1{
+  position: absolute;
+  left: 20%;
+  top: 10px;
+  display: block;
+  height: 30px;
+  width: 100px;
+  text-decoration: none;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  text-align: center;
+  line-height: 31px;
+  font-weight: bold;
+}
+#a2{
+  position: absolute;
+  left: 35%;
+  top: 10px;
+  display: block;
+  height: 30px;
+  width: 100px;
+  text-decoration: none;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  text-align: center;
+  line-height: 31px;
+  font-weight: bold;
+}
+#wcontent{
+  text-align: center;
+  height: 30px;
+  width: 300px;
+  left: 50%;
+  top: 10px;
+  position: absolute;
+  display: inline-block;
+  display: none;
+  font-size: 25px;
+  background-color: yellow;
+  color: black;
+}
+
+#p1content, #p2content{
+  font-weight: bold;
+  padding-top: 10px;
+  font-size: 20px;
+}

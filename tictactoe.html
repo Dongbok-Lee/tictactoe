@@ -19,9 +19,9 @@
         <td onclick="tictactoe(2); win(2)" id="td2"></td>
         <td onclick="tictactoe(3); win(3)" id="td3"></td>
       </tr>
-        <td onclick="tictactoe(4); win(4)" id="td4"></td>
-        <td onclick="tictactoe(5); win(5)" id="td5"></td>
-        <td onclick="tictactoe(6); win(6)" id="td6"></td>
+      <td onclick="tictactoe(4); win(4)" id="td4"></td>
+      <td onclick="tictactoe(5); win(5)" id="td5"></td>
+      <td onclick="tictactoe(6); win(6)" id="td6"></td>
       </tr>
       <tr>
         <td onclick="tictactoe(7); win(7)" id="td7"></td>
@@ -29,6 +29,13 @@
         <td onclick="tictactoe(9); win(9)" id="td9"></td>
       </tr>
     </table>
+  </div>
+  <div class="result">
+    <a id="a1" href="javascript:reset();">재경기</a>
+    <a id="a2" onclick="window.location.reload()">초기화</a>
+    <h1 id="wcontent"><span id="winner"></span>이 승리하였습니다.</h1>
+    <p id="p1content">p1 : <span id=p1score>0</span></p>
+    <p id="p2content">p2 : <span id=p2score>0</span></p>
   </div>
   <script src="tictactoe.js"></script>
 </body>
