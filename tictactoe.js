@@ -2,17 +2,12 @@ var n = 9;
 var cntp1 = 0;
 var cntp2 = 0;
 var numbers = new Array();
-<<<<<<< HEAD
 for (var j = 0; j < 9; j++) {
   numbers[j] = 0;
 }
 var tb = new Array();
 for (var i = 0; i < 9; i++) {
   tb[i] = i;
-=======
-for (var i = 0; i < 9; i++) {
-  numbers[i]=0;
->>>>>>> e42120c8e5c10a0f4118c6566603d53d6519a546
 }
 
 function tictactoe(t) {
@@ -22,7 +17,6 @@ function tictactoe(t) {
       numbers[t - 1] = 1;
     } else {
       document.getElementById('td' + t).classList.add('p1');
-      animateCircle(t);
       numbers[t - 1] = 1;
     }
     n--;
@@ -89,21 +83,4 @@ function reset() {
     document.getElementById('wcontent').style.display = 'none';
 
   }
-}
-function animateCircle(t){
-  var ctx = document.querySelector('#circle'+t).getContext("2d");
-  var end = Math.PI;
-  for(var i = 0; i<=100; i++){
-    draw(i);
-  }
-function draw(delay){
-  setTimeout(function(){
-    ctx.clearRect(0,0,100,100);
-    ctx.lineWidth = "15";
-    ctx.strokeStyle = "#b5b2ff";
-    ctx.beginPath();
-    ctx.arc(50,50,40,0,end*2/100*delay);
-    ctx.stroke();
-  },delay*4);
- }
 }
