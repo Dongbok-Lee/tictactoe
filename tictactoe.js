@@ -11,7 +11,7 @@ for (var i = 0; i < 9; i++) {
 }
 
 function tictactoe(t) {
-  if (n != 0 && numbers[t - 1] == 0) {
+  if (n > 0 && numbers[t - 1] == 0) {
     if (n % 2 == 0) {
       document.getElementById('td' + t).classList.add('p2');
       numbers[t - 1] = 1;
@@ -48,22 +48,22 @@ function win(u) {
   console.log(win);
   if (win > 0) {
     if (win == 11) {
+      n=-1;
       cntp1++;
       document.getElementById('winner').innerHTML = 'p1';
       document.getElementById('wcontent').style.display = 'block';
       document.getElementById('p1score').innerHTML = cntp1;
-      n = 0;
       for (m = 0; m < 9; m++) {
         tb[m] = m;
         numbers[m]=0;
       }
     }
     else if (win == 22) {
+      n=-1;
       cntp2++;
       document.getElementById('winner').innerHTML = 'p2';
       document.getElementById('wcontent').style.display = 'block';
       document.getElementById('p2score').innerHTML = cntp2;
-      n = 0;
       for (m = 0; m < 9; m++) {
         tb[m] = m;
         numbers[m]=0;
@@ -72,7 +72,9 @@ function win(u) {
     else if(win==1){
       document.getElementById('wcontent').innerHTML = '무승부입니다';
       document.getElementById('wcontent').style.display = 'block';
-      n=0;
+      for (m = 0; m < 9; m++) {
+        tb[m] = m;
+      }
     }
   }
 }
