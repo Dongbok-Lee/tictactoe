@@ -1,12 +1,9 @@
 var n = 9;
 var numbers = new Array();
-for (var j = 0; j < 9; j++) {
-  numbers[j]=0;
+for (var i = 0; i < 9; i++) {
+  numbers[i]=0;
 }
-var tb = new Array();
-for(var i=0; i<9; i++){
-  tb[i]=i;
-}
+
 function tictactoe(t) {
   if (numbers[t - 1] == 0) {
     if (n % 2 == 0) {
