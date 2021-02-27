@@ -2,8 +2,12 @@ var n = 9;
 var cntp1 = 0;
 var cntp2 = 0;
 var numbers = new Array();
+for (var j = 0; j < 9; j++) {
+  numbers[j] = 0;
+}
+var tb = new Array();
 for (var i = 0; i < 9; i++) {
-  numbers[i]=0;
+  tb[i] = i;
 }
 
 function tictactoe(t) {
@@ -13,7 +17,6 @@ function tictactoe(t) {
       numbers[t - 1] = 1;
     } else {
       document.getElementById('td' + t).classList.add('p1');
-      animateCircle(t);
       numbers[t - 1] = 1;
     }
     n--;
@@ -37,7 +40,7 @@ function win(u) {
       if (tb[2 * i] === tb[4] && tb[2 * i] === tb[8 - (2 * i)]) {
         win = tb[2 * i];
       }
-      if (n == 0) {
+      else if (n == 0) {
         win = 1;
       }
     }
@@ -52,26 +55,26 @@ function win(u) {
       n = 0;
       for (m = 0; m < 9; m++) {
         tb[m] = m;
+        numbers[m]=0;
       }
-    } else if (win == 22){
+    }
+    else if (win == 22) {
       cntp2++;
-    document.getElementById('winner').innerHTML = 'p2';
-    document.getElementById('wcontent').style.display = 'block';
-    document.getElementById('p2score').innerHTML = cntp2;
-    n = 0;
-    for (m = 0; m < 9; m++) {
-      tb[m] = m;
+      document.getElementById('winner').innerHTML = 'p2';
+      document.getElementById('wcontent').style.display = 'block';
+      document.getElementById('p2score').innerHTML = cntp2;
+      n = 0;
+      for (m = 0; m < 9; m++) {
+        tb[m] = m;
+        numbers[m]=0;
+      }
+    }
+    else if(win==1){
+      document.getElementById('wcontent').innerHTML = '무승부입니다';
+      document.getElementById('wcontent').style.display = 'block';
+      n=0;
     }
   }
-  else{
-    document.getElementById('wcontent').innerHTML = '무승부 입니다';
-    document.getElementById('wcontent').style.display = 'block';
-    n = 0;
-    for (m = 0; m < 9; m++) {
-      tb[m] = m;
-    }
-  }
-}
 }
 
 function reset() {
@@ -84,21 +87,4 @@ function reset() {
     document.getElementById('wcontent').style.display = 'none';
 
   }
-}
-function animateCircle(t){
-  var ctx = document.querySelector('#circle'+t).getContext("2d");
-  var end = Math.PI;
-  for(var i = 0; i<=100; i++){
-    draw(i);
-  }
-function draw(delay){
-  setTimeout(function(){
-    ctx.clearRect(0,0,100,100);
-    ctx.lineWidth = "15";
-    ctx.strokeStyle = "#b5b2ff";
-    ctx.beginPath();
-    ctx.arc(50,50,40,0,end*2/100*delay);
-    ctx.stroke();
-  },delay*4);
- }
 }
