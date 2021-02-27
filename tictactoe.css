@@ -84,13 +84,52 @@ table {
 }
 
 .p1{
-  background-image: url(go.jpeg);
   overflow: hidden;
-  background-position: -95px -316px;
 }
 
 .p2{
-  background-image: url(go.jpeg);
+  position: relative;
   overflow: hidden;
-  background-position: -302px -316px;
+  animation-duration: 1s;
+}
+.circle{
+  transform: rotate(-90deg);
+}
+.p2 #first{
+  position: absolute;
+  width: 15px;
+  left:40%;
+  background-color: peru;
+  overflow:hidden;
+  animation-name: Xani1;
+  height: 100%;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.p2 #second{
+  position: absolute;
+  height: 100%;
+  width: 15px;
+  left:40%;
+  overflow:hidden;
+  background-color: peru;
+  animation-name: Xani2;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes Xani1{
+0%{
+  tranform:rotate(0deg);
+}
+  100%{
+  transform: rotate(45deg);
+  }
+}
+@keyframes Xani2{
+  0%{
+    tranform:rotate(0deg);
+  }
+  100%{
+  transform: rotate(-45deg);
+  }
 }
