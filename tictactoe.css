@@ -83,27 +83,26 @@ table {
   border-right: none;
 }
 
-.p1{
-  background-image: url(go.jpeg);
+.p1 {
   overflow: hidden;
-  background-position: -95px -316px;
 }
 
-.p2{
-  background-image: url(go.jpeg);
+.p2 {
   overflow: hidden;
-  background-position: -302px -316px;
-}
-
-.result{
   position: relative;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
 }
 
-#a1{
-  position: absolute;
-  left: 20%;
+.result {
+  position: relative;
+  overflow: hidden;
+  animation-duration: 1s;
+}
+
+#a1 {
+  display: inline-block;
   top: 10px;
-  display: block;
   height: 30px;
   width: 100px;
   text-decoration: none;
@@ -114,11 +113,12 @@ table {
   line-height: 31px;
   font-weight: bold;
 }
-#a2{
-  position: absolute;
-  left: 35%;
-  top: 10px;
-  display: block;
+
+#a2 {
+  position: relative;
+  display: inline-block;
+  top: 0;
+  left: 170px;
   height: 30px;
   width: 100px;
   text-decoration: none;
@@ -129,12 +129,13 @@ table {
   line-height: 31px;
   font-weight: bold;
 }
-#wcontent{
+
+#wcontent {
   text-align: center;
   height: 30px;
   width: 300px;
-  left: 50%;
-  top: 10px;
+  left: 40%;
+  top: 0px
   position: absolute;
   display: inline-block;
   display: none;
@@ -143,8 +144,67 @@ table {
   color: black;
 }
 
-#p1content, #p2content{
-  font-weight: bold;
+#p1content, #p2content {
+  font-weight: 700;
   padding-top: 10px;
-  font-size: 20px;
+  font-size: 50px;
+}
+
+.circle {
+  transform: rotate(-90deg);
+}
+
+.p2 #first {
+  position: absolute;
+  left: 40%;
+  width: 15px;
+  background-color: peru;
+  overflow: hidden;
+  animation-name: Xani1;
+  height: 100%;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.p2 #second {
+  position: absolute;
+  height: 100%;
+  left: 40%;
+  width: 15px;
+  overflow: hidden;
+  background-color: peru;
+  animation-name: Xani2;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes Xani1 {
+  0% {
+    tranform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes Xani2 {
+  0% {
+    tranform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+.button{
+  position: relative;
+  left: 40%;
+}
+.result{
+  position: absolute;
+  top:200px;
+  left:20px;
+  font-size: 40px;
+  font-weight: 700;
 }
