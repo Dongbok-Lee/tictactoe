@@ -51,7 +51,7 @@ function win(u) {
     if (win == 11) {
       n=-1;
       cntp1++;
-      document.getElementById('winner').innerHTML = 'p1';
+      document.getElementById('winner').innerHTML = 'P1이 승리하셨습니다.';
       document.getElementById('wcontent').style.display = 'block';
       document.getElementById('p1score').innerHTML = cntp1;
       for (m = 0; m < 9; m++) {
@@ -62,7 +62,7 @@ function win(u) {
     else if (win == 22) {
       n=-1;
       cntp2++;
-      document.getElementById('winner').innerHTML = 'p2';
+      document.getElementById('winner').innerHTML = 'P2이 승리하셨습니다.';
       document.getElementById('wcontent').style.display = 'block';
       document.getElementById('p2score').innerHTML = cntp2;
       for (m = 0; m < 9; m++) {
@@ -71,10 +71,11 @@ function win(u) {
       }
     }
     else if(win==1){
-      document.getElementById('wcontent').innerHTML = '무승부입니다';
+      document.getElementById('winner').innerHTML = '무승부입니다';
       document.getElementById('wcontent').style.display = 'block';
       for (m = 0; m < 9; m++) {
-  tb[m] = m;
+        tb[m] = m;
+        numbers[m]=0;
 }
     }
   }
